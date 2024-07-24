@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ABMG</title>
+    <link rel="stylesheet" href="update-3.2.2.css">
+    <link rel="icon" href="favi.png" type="images/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Concert+One&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script>
+
+</head>
+<body>
+    <nav class="navbar background">
+        <ul class="nav-list">
+            <div class="logo"><img src="logopuretrans.png" alt="ABMG" class="logo"></div>
+        </ul>
+        <div class="rightnav">
+            <ul class="sidebar">
+                <div class="menusside">
+                    <li onclick=hideSidebar()><img src="close.png" alt="close" class="menuslisidecloselogo"></li>
+                    <li onclick=hideSidebar() class="menusliside"><a href="#">Home</a></li>
+                    <li onclick=hideSidebar() class="menusliside"><a href="#about">About</a></li>
+                    <li onclick=hideSidebar() class="menusliside"><a href="#service">Services</a></li>
+                    <li onclick=hideSidebar() class="menusliside"><a target="_blank" href="https://abhisheksahana.blogspot.com">Blogs</a></li>
+                    <li onclick=hideSidebar() class="menusliside"><a href="#contact">Contact Us</a></li>
+                </div>
+            </ul>
+            <ul class="nav-listright">
+                <div class="menus">
+                    <li class="menusli"><a href="#">Home</a></li>
+                    <li class="menusli"><a href="#about">About</a></li>
+                    <li class="menusli"><a href="#service">Service</a></li>
+                    <li class="menusli"><a target="_blank" href="https://abhisheksahana.blogspot.com">Blogs</a></li>
+                    <li class="menusli"><a href="#contact">Contact Us</a></li>
+                    <li class= "menu-button" onclick=showSidebar()><a href="#"><img src="menusw.png" alt="menu" class="menuslogo"></a></li>
+                </div>
+            </ul>
+        </div>
+    </nav>
+    <section class="firstsection" id="#home">
+            <div class="boxh1">
+                <h1 class="heading">Welcome to ABMG</h1>
+            </div>
+            <div class="boxmain">
+                <div class="boxmainto">
+                    <div class="mainto">
+                        <span class="text first-text">I'm a</span>
+                        <span class="text sec-text"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="downarrow">
+                <a href="#about">
+                    <img src="arrowD.png" alt="">
+                </a>
+            </div>
+    </section>
+    <br>
+    <div class="container">
+        <section class="bodyleftsection">
+            <div class="leftse">
+            </div>
+        </section>
+        <section class="bodymidsection">
+            <div class="midse">
+                <div class="part1">
+                    <h2 class="midsec" id="about">About</h2>
+                <br>
+                <div class="midmain about">
+                    <p>
+                        Welcome to ABMG, where innovation meets tradition. We are passionate about delivering high-quality Websites that exceed your expectations.
+                    </p>
+                    <div id="p1">
+                        <span class="aboutpara">
+                            <p>Mission Statement</p>
+                        </span>
+                        <p>
+                            Our mission is to ensuring that every Websites we offer brings value and satisfaction to our customers.
+                        </p>
+                    </div>
+                    <div id="p2">
+                        <span class="aboutpara">
+                            <p>Values and Philosophy</p>
+                        </span>
+                        <p>
+                            We Highlight the core values and philosophy that drive your business decisions and operations in our Websites.
+                        </p>
+                    </div>
+                    <div id="p3">
+                        <span class="aboutpara">
+                            <p>What We Do ?</p>
+                        </span>
+                        <p>
+                            We provide a detailed description of your products or services, highlighting what sets them apart.
+                            <br>
+                            At ABMG, we specialize in Websites. Our Websites are known for its Uniqueness.
+                        </p>
+                    </div>
+                </div>
+                <br>
+                <h2 class="midsec" id="service">Services</h2>
+                <br>
+                <div class="midmain service">
+                    
+                    <div class="card">
+                        <img src="webdeveloper.jpg" alt="">
+                        <div class="card-body">
+                            <h1 class="card-title">WEB DEVELOPER</h1>
+                            <p class="card-info">We build websites from the root, including designs, front-end and back-end services.</p>
+                            <div class="popup" id="popup-1">
+                                <div class="overlay"></div>
+                                <div class="content">
+                                    <div class="close-btn" onclick="togglePopup()">&times</div>
+                                    <div class="popup-box">
+                                        <h5>We build websites from the root, including designs, front-end and back-end services</h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <button onclick="togglePopup()" class="onlckbtn">show more</button>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img src="frontend.jpg" alt="">
+                        <div class="card-body">
+                            <h1 class="card-title">FRONT-END DEVELOPER</h1>
+                            <p class="card-info">Works on client-side of a website,focusing on design, layout and interactive elements that user see and interact with.</p>
+                            <div class="popup" id="popup-2">
+                                <div class="overlay"></div>
+                                <div class="content">
+                                    <div class="close-btn" onclick="togglePopup()">&times</div>
+                                    <div class="popup-box">
+                                        <h5>Works on client-side of a website,focusing on design, layout and interactive elements that user see and interact with.</h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <button onclick="togglePopup()" class="onlckbtn">show more</button>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img src="backend.jpg" alt="">
+                        <div class="card-body">
+                            <h1 class="card-title">BACK-END DEVELOPER</h1>
+                            <p class="card-info">Building and maintaing server side of website, Handling user authentication, Procesing Server requests.</p>
+                            <div class="popup" id="popup-3">
+                                <div class="overlay"></div>
+                                <div class="content">
+                                    <div class="close-btn" onclick="togglePopup()">&times</div>
+                                    <div class="popup-box">
+                                        <h5>Building and maintaing server side of website, Handling user authentication, Procesing Server requests.</h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <button onclick="togglePopup()" class="onlckbtn">see more</button>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img src="webdesign.jpg" alt="">
+                        <div class="card-body">
+                            <h1 class="card-title">WEB DESIGN</h1>
+                            <p class="card-info">We creates & design the websites, selecting color schemes, creating layouts and choosing typography.</p>
+                            <div class="popup" id="popup-4">
+                                <div class="overlay"></div>
+                                <div class="content">
+                                    <div class="close-btn" onclick="togglePopup()">&times</div>
+                                    <div class="popup-box">
+                                        <h5>We creates & design the websites, selecting color schemes, creating layouts and choosing typography.</h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <button onclick="togglePopup()" class="onlckbtn">show more</button>
+                        </div>
+                    </div>
+                </div>
+                
+
+
+                </div>
+                <br>
+                <h2 class="midsec" id="contact">Get in Touch</h2>
+                <br>
+                <div class="midmain contacts">
+                    <p>We'd Love to Hear from You!
+                        Whether you have a question about our products, need assistance with an order, or just want to share your feedback, we're here to help. Reach out to us using any of the methods below, and we'll get back to you as soon as we can  
+                        <br>
+                        For your convenience, you can also reach out to us directly through our online contact form. Please fill out the form below, and we will get back to you as soon as possible</p>
+                    <div class="contactform">
+                        <div class="formcon">
+                            <div class="alert">You Message has been sent</div>
+                            <form action="" id="contactformm">
+                                <div class="gen">
+                                    <textarea name="" id="name" cols="35" rows="2" placeholder="Your Name" class="txtnm" required></textarea>
+                                    <input type="email" id="email" placeholder="Your email">
+                                    <input type="email" id="emailful" placeholder="Your email">
+                                </div>
+                                <textarea name="" id="subject" cols="76" rows="5" placeholder="Subject"></textarea>
+                                <br>
+                                <textarea name="" id="message" cols="76" rows="5" placeholder="Message"></textarea>
+                                <button class="btn" type="submit">Submit</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <section class="containertst">
+                    <h2>TESTIMONIALS</h2>
+                    <br>
+                        <div class="testimonial">
+                            <div class="testi-content">
+                                <div class="slider-box">
+                                    <div id="slider">
+                                        <div class="slide">
+                                            <div class="parah">
+                                                <p class="testiparaw">
+                                                    “Abhishek redesigned our website, doubling our conversion rates. His creativity and technical skills are unmatched. Outstanding work!”
+                                                </p>
+                                            </div>
+                        
+                                            <img src="quote-left.png" alt="" class="quote-icon">
+                        
+                                            <div class="details">
+                                                <span class="name">Elena Ivanova</span>
+                                                <span class="job">Fashion Influencer</span>
+                                            </div>
+                                        </div>
+                                        <div class="slide">
+                                            <div class="parah">
+                                                <p class="testiparaw">
+                                                    "Working with Abhishek (ABMG) was fantastic. He brought our vision to life with a beautiful, responsive website, significantly improving our online presence. Highly recommend!"
+                                                </p>
+
+                                            </div>
+                                            <img src="quote-left.png" alt="" class="quote-icon">
+                        
+                                            <div class="details">
+                                                <span class="name">Neha Sharma</span>
+                                                <span class="job">Designer</span>
+                                            </div>
+                                        </div>
+                                        <div class="slide">
+                                            <div class="parah">
+                                                <p class="testiparaw c">
+                                                    “Abhishek is professial, communicative, and truly delivered a top-notch website. I highly recommend for his skill and performance”
+                                                </p>
+
+                                            </div>
+                        
+                                            <img src="quote-left.png" alt="" class="quote-icon">
+                        
+                                            <div class="details">
+                                                <span class="name">Yash Rohilla</span>
+                                                <span class="job">web developer</span>
+                                            </div>
+                                        </div>
+                                        <div class="slide">
+                                            <div class="parah">
+                                                <p class="testiparaw d">
+                                                    "Despite a tight deadline, Abhishek delivered an appealing and user-friendly website. Customers love the easy online ordering. Highly recommend their services!"
+                                                </p>                                                
+                                            </div>
+                        
+                                            <img src="quote-left.png" alt="" class="quote-icon">
+                        
+                                            <div class="details">
+                                                <span class="name">Ravi Malhotra</span>
+                                                <span class="job">web developer</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>                    
+                </section>
+            </div>
+            <!-- <div class="rightsemid">
+                <h2 class="rightsecmid" id="blogs">right / blogs</h2>
+                <div class="rightmainmid"></div>
+            </div> -->
+        </section>
+        <section class="bodyrightsection">
+            <div class="rightse">
+                <div class="rightmain"></div>
+            </div>
+        </section>
+    </div>
+    <div class="movetotop">
+        <a href="#"><img src="movetop.png" alt="move to top" class="movetotopimg"></a>
+    </div>
+    <br>
+    <footer>
+        <div class="footer">
+            <img src="logopuretrans.png" alt="ABMG" class="footerabmg">
+            <div class="lia">
+                <li class="footerlia-about"><a href="#about" class="footclasslia">About</a></li>
+                <li class="footerlia"><a href="#service" class="footclasslia">Services</a></li>
+                <li class="footerlia-s"><a target="_blank" href="https://abhisheksahana.blogspot.com" class="footclasslia">Blogs</a></li>
+                <!-- <li class="footerlia-f"><a href="#blogss" class="footclasslia">Blogs</a></li> -->
+                <li class="footerlia-f"><a target="_blank" href="https://abhisheksahana.blogspot.com" class="footclasslia">Blogs</a></li>
+                <li class="footerlia"><a href="#contact" class="footclasslia">Contact us</li>
+            </div>
+            <div class="footer-img">
+                <p class="footer-para">follow me on</p>
+                <div class="one">
+                    <!-- <div class="two"> -->
+                        <a target="_blank" href="https://www.facebook.com/profile.php?id=61561497463005&mibextid=rS40aB7S9Ucbxw6v"><img src="facebooklogo.png" alt="facebook" class="facebook social"></a>
+                        <a target="_blank" href="https://www.instagram.com/sahanaabhishek?igsh=MzRIODBiNWFIZA=="><img src="instagramlogo.png" alt="Instagram" class="instagram social"></a>
+                    <!-- </div> -->
+                    <!-- <div class="three"> -->
+                        <a target="_blank" href="https://x.com/AbhishekSahana"><img src="xco.png" alt="Twitter" class="twitter social"></a>
+                        <a target="_blank" href="https://www.youtube.com/@WebABMG"><img src="youtubelogoorg.png" alt="Youtube" class="youtube social"></a>
+                    <!-- </div> -->
+                </div>
+            </div>
+        </div>
+        <hr>
+        <p class="copyright">© ABMG</p>
+    </footer>
+
+    <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js"></script>
+    <script src="main1.js" defer></script>
+    <script src="copy3.2.1.js"></script>
+    <script src="animatedwords.js"></script>
+    <script src="popup2.js"></script>
+    <script src="security.js"></script>
+
+</body>
+</html>
+
+
+
+<!-- <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&amp;display=swap" rel="stylesheet" data-optimized-fonts="true"> -->
+<!-- https://console.firebase.google.com/project/testpro1-3188a/database/testpro1-3188a-default-rtdb/data -->
